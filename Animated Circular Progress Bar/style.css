@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#444, #222);
+}
+
+.card{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.card .rating{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card .rating .block{
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: #000;
+    left: 50%;
+    transform-origin: 50% 100px;
+    opacity: 0;
+    animation: animate 0.1s linear forwards;
+}
+
+@keyframes animate {
+    to{
+        opacity: 1;
+    }
+}
+
+.card .rating .block:nth-child(-n+50){
+    background: #0f0;
+    /*box-shadow: 0 0 15px #0f0, 0 0 30px #0f0;*/
+}
+
+.card .rating h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.card .rating h2 span{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.card .rating h2 sub{
+    font-size: 1.5em;
+    font-weight: 300;
+}

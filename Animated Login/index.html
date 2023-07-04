@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box signin">
+            <h2>계정이 있으신가요 ?</h2>
+            <button class="signinBtn">로그인</button>
+        </div>
+        <div class="box signup">
+            <h2>계정이 없으신가요 ?</h2>
+            <button class="signupBtn">회원가입</button>
+        </div>
+        <div class="formBx">
+            <div class="form signinform">
+                <form>
+                    <h3>로그인</h3>
+                    <input type="text" placeholder="아이디">
+                    <input type="password" placeholder="비밀번호">
+                    <input type="submit" value="로그인">
+                    <a href="#" class="forgot">비밀번호 찾기</a>
+                </form>
+            </div>
+
+            <div class="form signupform">
+                <form>
+                    <h3>회원가입</h3>
+                    <input type="text" placeholder="아이디">
+                    <input type="text" placeholder="닉네임">
+                    <input type="password" placeholder="비밀번호">
+                    <input type="password" placeholder="비밀번호 확인">
+                    <input type="submit" value="회원가입">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let signinBtn = document.querySelector('.signinBtn');
+        let signupBtn = document.querySelector('.signupBtn');
+        let body = document.querySelector('body');
+
+        signinBtn.onclick = function(){
+            body.classList.remove('slide')
+        }
+
+        signupBtn.onclick = function(){
+            body.classList.add('slide')
+        }
+    </script>
+</body>
+</html>
