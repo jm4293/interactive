@@ -1,0 +1,15 @@
+.items{
+    border: 1px solid red;
+    display: flex;
+    overflow: hidden;
+}
+
+.items div{
+    border: 1px solid blue;
+    margin: 0 50px;
+    padding: 50px 50px;
+}
+
+.item.active{
+    transform: scale(1.5);
+}
