@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cursor"></div>
+
+    <script>
+        let cursor = document.querySelector("#cursor");
+        let body = document.querySelector("body");
+        document.addEventListener("mousemove", e => {
+            body.style.backgroundPositionX = e.pageX/-4 + "px"
+            body.style.backgroundPositionY = e.pageX/-4 + "px"
+            cursor.style.top = e.pageY + "px"
+            cursor.style.left = e.pageX + "px"
+        })
+    </script>
+</body>
+</html>
