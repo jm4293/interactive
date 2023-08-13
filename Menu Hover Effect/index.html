@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Menu1</a></li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+        <li><a href="#">Menu5</a></li>
+        <li><a href="#">Menu6</a></li>
+        <div id="cursor"></div>
+    </ul>
+
+    <script>
+        let text = document.querySelectorAll('ul li a').forEach(text => {
+            text.innerHTML = text.innerText.split("").map((letters, i) => `<span style="transition-delay: ${i*40}ms;">${letters}</span>`).join("");
+        })
+
+        let cursor = document.querySelector("#cursor");
+        document.addEventListener('mousemove', e => {
+            cursor.style.top = e.pageY + "px"
+            cursor.style.left = e.pageX + "px"
+        })
+
+    </script>
+</body>
+</html>
