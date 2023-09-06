@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1;"><img src="1.png"/></span>
+            <span style="--i:2;"><img src="2.png"/></span>
+            <span style="--i:3;"><img src="3.png"/></span>
+            <span style="--i:4;"><img src="4.png"/></span>
+            <span style="--i:5;"><img src="5.png"/></span>
+            <span style="--i:6;"><img src="6.png"/></span>
+            <span style="--i:7;"><img src="7.png"/></span>
+            <span style="--i:8;"><img src="8.png"/></span>
+        </div>
+        <div class="btns">
+            <div class="btn prev"></div>
+            <div class="btn next"></div>
+        </div>
+    </div>
+
+    <script>
+        let prev = document.querySelector(".prev")
+        let next = document.querySelector(".next")
+        let box = document.querySelector(".box")
+
+        let degrees = 0;
+
+        prev.addEventListener('click', () => {
+            degrees += 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg);`;
+        })
+
+        next.addEventListener('click', () => {
+            degrees -= 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg);`;
+        })
+    </script>
+</body>
+</html>
